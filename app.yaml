@@ -1,0 +1,19 @@
+application: palmtbnet
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /static
+  static_dir: static
+
+#- url: /(finder|thanks)
+#  script: dispatch.py
+  
+#- url: /(show|list)
+#  script: dispatch.py
+#  login: required
+
+- url: /.*
+  script: dispatch.py
+
