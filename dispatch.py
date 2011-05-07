@@ -1,18 +1,11 @@
-# Device Infomation registration pages.
 # -*- coding: utf-8 -*-
 
 import os
-from models import DeviceInfo
-from models import UserInfo
 
 from google.appengine.api import users
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import template
 from google.appengine.ext.webapp.util import run_wsgi_app
-
-import twitter
-import mono
-import finder
 
 class TopPage(webapp.RequestHandler):
     def get(self):
@@ -36,15 +29,6 @@ class TopPage(webapp.RequestHandler):
 
 
 application = webapp.WSGIApplication([
-#        ('/twitter', twitter.RegistTwitter),
-#        ('/list', mono.ListDevice),
-#        ('/regist', mono.RegistDevice),
-#        ('/show', mono.ShowDevice),
-#        ('/edit', mono.EditDevice),
-#        ('/delete', mono.DeleteDevice),
-#       ('/finder', finder.FindDevice),
-#        ('/notify', finder.NotifyOwner),
-#        ('/thanks', finder.Thanks),
         ('/', TopPage),
         ], debug=True)
 
