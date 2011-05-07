@@ -1,38 +1,8 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>mkouhei&#039;s site</title>
-    <link rel="stylesheet" type="text/css" href="static/smartphone.css" media="only screen and (max-width: 854px)"/>
-    <link rel="stylesheet" type="text/css" href="static/desktop.css" media="only screen and (min-width: 481px)"/>
-    <!--[if IE]>
-    <link rel="stylesheet" type="text/css" href="static/explorer.css" media="all"/>
-    <![endif]-->
-    <meta name="viewport" content="user-scalable=no, with=device-width"/>
-    <link rel="stylesheet" href="static/jquery.mobile-1.0a4.1.min.css" />
-    <script src="static/jquery-1.6.min.js"></script>
-    <script src="static/jquery.mobile-1.0a4.1.min.js"></script>
-    <script type="text/javascript" src="static/main.js"></script>
-    <script type="text/javascript" src="http://use.typekit.com/prp5ifz.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1309764-3']);
-  _gaq.push(['_trackPageview']);
+{% extends "base.html" %}
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-   </head>
-  <body>
-    <div data-role="page">
-      <div data-role="header">
-	<h1 id=".tk-fertigo-pro">mkouhei</h1>
-      </div>
-      <div data-role="content">
+{% block title %}mkouhei&#039;s site{% endblock %}
+{% block h1 %}mkouhei{% endblock %}
+{% block content %}
 	<p>I am a self-styled super-househusband. I do mainly housework, and am doing the profession of the hobby and the side job of work on the other hand. :)</p>
 	<h2 id=".tk-fertigo-pro">About this site</h2>
 	<p>I am usually using the micro server named OpenBlockS as home server. It is a hobby.</p>
@@ -59,10 +29,4 @@ sub 4096R/35992CC1 2009-06-19
 	  <li><a href="http://mixi.jp/show_friend.pl?id=9891736">mixi</a></li>
 	  <li><a href="http://tinyurl.com/meshitosake">MyMap (ja)</a></li>
 	</ul>
-      </div>
-      <div data-role="footer">
-	<address>&copy; 2010-2011. Kouhei Maeda</address>
-      </div>
-    </div>
-  </body>
-</html>
+{% endblock %}
